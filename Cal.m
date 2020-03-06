@@ -1,6 +1,5 @@
-clc; clear;
-
 function Cal(t1,t2,t3,t4,t5,t6)
+
 % DH-Parameters
 L = [0 0 -172.5 0 0 0];
 a = [90 -90 -90 0 90 0];
@@ -17,7 +16,7 @@ th = [0 90 -90 90 0 0];
     th5 = t5 + th(5); % wrist
     th6 = t6 + th(6); % wrist
 
-    t0_1 = RotZ(th1) * calculate_transform_matrix(a(1),0,L(1),0,d(1));
+    t0_1 = RotZ(th1) * calculate_transform_matrix(a(1),0,0,L(1),0,d(1));
     t1_2 = RotZ(th2) * calculate_transform_matrix(a(2),0,0,L(2),0,d(2));
     t2_3 = RotZ(th3) * calculate_transform_matrix(a(3),0,0,L(3),0,d(3));
     t3_4 = RotZ(th4) * calculate_transform_matrix(a(4),0,0,L(4),0,d(4));
